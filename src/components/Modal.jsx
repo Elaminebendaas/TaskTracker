@@ -1,7 +1,9 @@
+import '../App.css'
+
 function Modal(props){
     return(
-        <div onClick={props.onClick}>
-
+        <div className='signup-modal' onClick={props.onClick}>
+            hello
         </div>
     )
 
