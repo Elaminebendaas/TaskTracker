@@ -6,16 +6,18 @@
 }
 
 .logo {
-  height: 6em;
-  padding: 1.5em;
+  height: 2em;
+  padding: 0.5em;
   will-change: filter;
   transition: filter 300ms;
 }
 .logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
+  filter: drop-shadow(0 0 20em #646cffaa);
+  transform: scale(110%);
+  transition: transform 0.2s ease-in-out;
 }
 .logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
+  filter: drop-shadow(0 20em 20em #61dafbaa);
 }
 
 @keyframes logo-spin {
@@ -37,6 +39,29 @@
   padding: 2em;
 }
 
-.read-the-docs {
-  color: #888;
+.footer{
+  background-color: black;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  display: flex;
+  justify-content:space-around;
+  align-items: center;
+  
+}
+
+.dropshadow{
+  filter: drop-shadow(0 0 5em rgba(0,0,0,1));
+}
+
+.footer > p{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.gitlogo:hover{
+  transform: scale(110%);
+  transition: transform 0.2s ease-in-out;
 }
