@@ -65,3 +65,38 @@
   transform: scale(110%);
   transition: transform 0.2s ease-in-out;
 }
+button {
+  border-radius: 8px;
+  border: 3px solid slategray;
+  padding: 0.6em 1.2em;
+  font-size: 1em;
+  font-weight: 500;
+  color: black;
+  font-family: inherit;
+  background-color: white;
+  cursor: pointer;
+  transition: border-color 0.25s;
+}
+button:hover {
+  border-color: #646cff;
+}
+
+.navbar{
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: rgb(12, 12, 12);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.navbar > h1{
+  margin-left: 3em;
+}
+.navbar > button{
+  margin-right: 3em;
+}
+.title{
+  font-size: 35px;
+}
