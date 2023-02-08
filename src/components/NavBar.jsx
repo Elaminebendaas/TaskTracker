@@ -1,6 +1,7 @@
 import { useState } from 'react'
 import '../App.css'
 import Backdrop from './Backdrop'
+import Item from './Item'
 import Modal from './Modal'
 
 function Navbar() {
@@ -21,6 +22,7 @@ function Navbar() {
             </div>
             {active && <Modal onClick={setModal} />}
             {active && <Backdrop onClick={setModal} />}
+        
         </>
     )
 }

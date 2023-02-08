@@ -107,7 +107,7 @@ button:hover {
   top: 0;
   left: 0;
   z-index: 2;
-  background-color: rgba(255, 255, 255, 0.75);
+  background-color: rgba(255, 255, 255, 0.60);
 }
 .signup-modal{
   position: absolute;
@@ -116,6 +116,51 @@ button:hover {
   border-radius: 5px;
   top: 50%;
   left: 50%;
+  width: 20em;
+  padding: 1em;
   transform: translate(-50%,-50%);
   border: 2px solid #646cff;
+}
+form{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1em;
+  text-align: left;
+  font-weight: 500;
+}
+input{
+  width: 70%;
+  padding: 0.5rem;
+}
+textarea{
+  width: 70%;
+  height: 5vh;
+}
+form > div {
+  display: flex;
+  gap: 1em;
+}
+.item-section{
+  display: flex;
+  position: fixed;
+  flex-wrap: wrap;
+  gap: 2em;
+  top: 150px;
+  left: 50px;
+}
+.item{
+  color: black;
+  padding: 0.5rem;
+  width: 350px;
+  height: 200px;
+  background-color: white;
+  border-radius: 8px;
+  border: 2px solid black;
+  transition: transform 0.3s ease-in-out;
+}
+.item:hover{
+  filter: drop-shadow(0 0 1em white);
+  transform: scale(102%);
 }
