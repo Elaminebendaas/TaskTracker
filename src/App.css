@@ -147,7 +147,8 @@ form > div {
   position: fixed;
   flex-wrap: wrap;
   overflow-y: scroll;
-  height: 520px;
+  height: 70vh;
+  width: 90%;
   gap: 2em;
   top: 130px;
   left: 50px;
