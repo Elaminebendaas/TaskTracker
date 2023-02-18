@@ -149,6 +149,7 @@ form > div {
   overflow-y: scroll;
   height: 70vh;
   width: 90%;
+  padding: 2em;
   gap: 2em;
   top: 130px;
   left: 50px;
