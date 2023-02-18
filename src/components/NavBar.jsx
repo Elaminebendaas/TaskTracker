@@ -21,11 +21,11 @@ function Navbar(props) {
             <div className='navbar'>
                 <h1 className='title'>To Do</h1>
                 <div className='seperation'>
-                {props.signedIn ? <button onClick={setModal}>Add Task</button> : <button onClick={props.signIn}>Sign In</button>}
+                {props.signedIn ? <button onClick={setModal} >Add Task</button> : <button onClick={props.signIn}>Sign In</button>}
                 {props.signedIn && <button onClick={props.signOut}>Sign Out</button>}
                 </div>
             </div>
-            {active && <Modal onClick={setModal} />}
+            {active && <Modal onClick={setModal} fetch={props.fetch}/>}
             {active && <Backdrop onClick={setModal} />}
         
         </>

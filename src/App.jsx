@@ -4,7 +4,7 @@ import Footer from './components/Footer'
 import Item from './components/Item'
 import Navbar from './components/NavBar'
 import { initializeApp } from "firebase/app";
-import { getFirestore, collection, getDocs } from 'firebase/firestore/lite';
+import { getFirestore, collection, getDocs, doc } from 'firebase/firestore/lite';
 import { signOut, getAuth, signInWithPopup, GoogleAuthProvider } from "firebase/auth";
 
 // TODO: Add SDKs for Firebase products that you want to use
@@ -27,48 +27,49 @@ export const app = initializeApp(firebaseConfig);
 export const db = getFirestore(app)
 const provider = new GoogleAuthProvider();
 export const auth = getAuth();
-function checkUser(user){
-  if(user){
-
-    return true
-  }else{
-    console.log(user)
-    return false
-  }
-}
 
 
 function App() {
-  const [signInState, infoChange] = useState(null);
+  
+  const [signInState, infoChange] = useState()
   const [todos, setTodos] = useState([])
-  let tempTodos = []
-
+  let user = auth.currentUser;
+  let bs = []
+ useEffect(() =>{
+  if(user){
+    infoChange(true)
+  }else{
+    infoChange(false)
+  }
+ },[user, infoChange])
 
   const fetchPost = async () => {
-    checkUser(auth.currentUser)
+    let tempTodos = [];
     await getDocs(collection(db, 'item'))
       .then((querySnapshot) =>{
         const newData = querySnapshot.docs.map((doc) => ({...doc.data(), id:doc.id}))
+        
         newData.forEach(element => {
           if(element.uid == auth.currentUser.uid){
             tempTodos.push(element)
+          }else{
+            setTodos([...tempTodos])
           }
         });
-        setTodos(tempTodos)
-        
-        
+        setTodos([...tempTodos])
       })
   }
+
+
   useEffect(() =>{
     fetchPost()
   }, [])
 
   
-
-
   const signInWithGoogle = () => {
     signInWithPopup(auth, provider)
   .then((result) => {
+    fetchPost()
     // This gives you a Google Access Token. You can use it to access the Google API.
     const credential = GoogleAuthProvider.credentialFromResult(result);
     const token = credential.accessToken;
@@ -90,24 +91,24 @@ function App() {
   }
   const xsignOut = () =>{
     signOut(auth).then(() => {
-      infoChange(false) 
+      infoChange(false)
+      setTodos([...bs])
     }).catch((error) =>{
+      setTodos([...bs])
       console.error("An error occured when you signed out!")
     }
     )
   }
   
   
-  //
+  
   return (
-   
+    
     <div className="App">
     
-      <Navbar signOut={xsignOut} signedIn={signInState}  signIn={signInWithGoogle}/>
-
+      <Navbar signOut={xsignOut} signedIn={signInState} fetch={fetchPost} signIn={signInWithGoogle}/>
       <div className='item-section'>
-      <Item id='1' title='hello' description='dcdsasd' completion='false' date='2020'/>
-      {todos && todos.map(todo => <Item title={todo.title} description={todo.description} date={todo.date} completion={todo.completion}/>)}
+      {todos && todos.map(todo => <Item fetch={fetchPost} id={todo.id} title={todo.title} description={todo.description} date={todo.date} completion={todo.completion}/>)}
       </div>
       <Footer />
     </div>

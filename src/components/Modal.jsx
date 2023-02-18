@@ -10,11 +10,12 @@ function Modal(props) {
         description: '',
         completion: false,
         date: '',
-        uid: ''
+        uid: '', 
     })
 
     const addTodo = async (e) => {
         e.preventDefault();
+
         const uid = auth.currentUser.uid
         try{
             const docRef = await addDoc(collection(db, 'item'),{
@@ -22,11 +23,13 @@ function Modal(props) {
                 description: todo.description,
                 completion: false,
                 date: todo.date,
-                uid: uid
+                uid: uid,
             })
             props.onClick()
+            props.fetch()
             console.log("Document written with ID: ", docRef.id)
         }catch (e) {
+            props.fetch()
             console.log(todo)
             console.error('Error adding document: ', e)
         }
@@ -55,7 +58,10 @@ function Modal(props) {
                 <input type="date" onChange={handleDate}/>
                 <div>
                     <button onClick={props.onClick}>Cancel</button>
-                    <button onClick={addTodo}>Confirm</button>
+                    <button onClick={() => {addTodo()
+                                           
+                                            }}>
+                                            Confirm</button>
                 </div>
             </form>
         </div>
