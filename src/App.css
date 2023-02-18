@@ -146,8 +146,10 @@ form > div {
   display: flex;
   position: fixed;
   flex-wrap: wrap;
+  overflow-y: scroll;
+  height: 520px;
   gap: 2em;
-  top: 150px;
+  top: 130px;
   left: 50px;
 }
 .item{
@@ -163,4 +165,14 @@ form > div {
 .item:hover{
   filter: drop-shadow(0 0 1em white);
   transform: scale(102%);
+}
+.seperation{
+  padding-right: 10px;
+  display: flex;
+  gap: 20px;
+}
+.seperation2{
+  display: flex;
+  justify-content: center;
+  gap: 10px;
 }
