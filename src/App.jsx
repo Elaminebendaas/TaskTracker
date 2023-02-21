@@ -108,7 +108,7 @@ function App() {
     
       <Navbar signOut={xsignOut} signedIn={signInState} fetch={fetchPost} signIn={signInWithGoogle}/>
       <div className='item-section'>
-      {todos && todos.map(todo => <Item fetch={fetchPost} id={todo.id} title={todo.title} description={todo.description} date={todo.date} completion={todo.completion}/>)}
+      {todos && todos.map(todo => <Item key={todo.id} fetch={fetchPost} id={todo.id} title={todo.title} description={todo.description} date={todo.date} completion={todo.completion}/>)}
       </div>
       <Footer />
     </div>

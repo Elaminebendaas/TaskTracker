@@ -163,6 +163,10 @@ form > div {
   border-radius: 8px;
   border: 2px solid black;
   transition: transform 0.3s ease-in-out;
+  transition: text-decoration 0.3s ease-in-out;
+}
+.complete{
+  text-decoration: line-through;
 }
 .item:hover{
   filter: drop-shadow(0 0 1em white);
