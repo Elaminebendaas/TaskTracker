@@ -1,4 +1,4 @@
-<p style="display: flex; flex-direction: column; justify-content: center; align-items:center; text-align: center;">
+<p style="display: flex; flex-direction: column; justify-content: center; align-items:center; text-align: center; align: center;">
 <p style="display:flex; margin-bottom: 40px; border-bottom: solid 2px grey">
 <h1 style="text-align: center;">To Do Application<img src="logo.png" width=30 height=30/></h1>
 
