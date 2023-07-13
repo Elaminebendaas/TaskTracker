@@ -5,7 +5,7 @@
 
 
 
-<p align="center" style="font-weight: bold">Technologies Used</p>
+<h3 align="center" style="font-weight: bold">Technologies Used</h3>
 <p align="center">
     <img src="https://img.shields.io/badge/JavaScript-323330?style=for-the-badge&logo=javascript&logoColor=F7DF1E" />
     <img src="https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB)" />
