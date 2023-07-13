@@ -1,6 +1,6 @@
 
 
-<h1 align="center" style="align: center;">To Do Application <img src="logo.png" width=30 height=30/> <a target="_blank" href="https://todo.elaminebendaas.vercel.app/">[LINK]</a></h1>
+<h1 align="center" style="align: center;">To Do Application <img src="logo.png" width=30 height=30/> <a href="https://todo.elaminebendaas.vercel.app/"  target="_blank">[LINK]</a></h1>
 
 
 
