@@ -1,6 +1,6 @@
 
-<p style='align: center;>
-<h1 style="text-align: center;">To Do Application<img src="logo.png" width=30 height=30/></h1>
+<p style='align: center;'>
+<h1 style="align: center;">To Do Application<img src="logo.png" width=30 height=30/></h1>
 <p>
 
 <p>
