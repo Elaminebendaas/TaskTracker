@@ -1,8 +1,7 @@
 
-<p style="display:flex; margin-bottom: 40px; border-bottom: solid 2px grey">
+
 <h1 style="text-align: center;">To Do Application<img src="logo.png" width=30 height=30/></h1>
 
-</p>
 
 
 ![javascript](https://img.shields.io/badge/JavaScript-323330?style=for-the-badge&logo=javascript&logoColor=F7DF1E)
