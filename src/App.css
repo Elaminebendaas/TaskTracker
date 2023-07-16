@@ -160,7 +160,7 @@ form > div {
   width: 350px;
   height: fit-content;
   min-height: 200px;
-  overflow: hidden;
+  overflow-wrap: normal;
   background-color: white;
   border-radius: 8px;
   border: 2px solid black;
