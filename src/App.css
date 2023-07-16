@@ -158,6 +158,7 @@ form > div {
   color: black;
   padding: 0.5rem;
   width: 350px;
+  height: fit-content;
   min-height: 200px;
   overflow: hidden;
   background-color: white;
