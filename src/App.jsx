@@ -7,11 +7,7 @@ import { initializeApp } from "firebase/app";
 import { getFirestore, collection, getDocs, doc } from 'firebase/firestore/lite';
 import { signOut, getAuth, signInWithPopup, GoogleAuthProvider } from "firebase/auth";
 
-// TODO: Add SDKs for Firebase products that you want to use
-// https://firebase.google.com/docs/web/setup#available-libraries
 
-// Your web app's Firebase configuration
-// For Firebase JS SDK v7.20.0 and later, measurementId is optional
 const firebaseConfig = {
   apiKey: "AIzaSyACWQvqr1rTLWBqFOtDjfw9BKQsT80Xor4",
   authDomain: "todo-react-9c08c.firebaseapp.com",
@@ -35,13 +31,13 @@ function App() {
   const [todos, setTodos] = useState([])
   let user = auth.currentUser;
   let bs = []
- useEffect(() =>{
-  if(user){
-    infoChange(true)
-  }else{
-    infoChange(false)
-  }
- },[user, infoChange])
+  useEffect(() =>{
+    if(user){
+      infoChange(true)
+    }else{
+      infoChange(false)
+    }
+  },[user, infoChange])
 
   const fetchPost = async () => {
     let tempTodos = [];

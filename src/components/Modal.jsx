@@ -1,7 +1,6 @@
 import '../App.css'
 import { collection, addDoc } from 'firebase/firestore/lite'
 import { db, auth } from '../App'
-import { async } from '@firebase/util'
 import { useState } from 'react'
 
 function Modal(props) {

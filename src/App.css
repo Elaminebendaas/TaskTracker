@@ -158,12 +158,11 @@ form > div {
   color: black;
   padding: 0.5rem;
   width: 350px;
-  height: 200px;
+  min-height: 200px;
   background-color: white;
   border-radius: 8px;
   border: 2px solid black;
-  transition: transform 0.3s ease-in-out;
-  transition: text-decoration 0.3s ease-in-out;
+  transition: all 0.35s ease-in-out;
 }
 .complete{
   text-decoration: line-through;

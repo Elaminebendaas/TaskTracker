@@ -1,7 +1,6 @@
 import { useState } from 'react'
 import '../App.css'
 import Backdrop from './Backdrop'
-import Item from './Item'
 import Modal from './Modal'
 
 
@@ -19,7 +18,7 @@ function Navbar(props) {
     return (
         <>
             <div className='navbar'>
-                <h1 className='title'>To Do</h1>
+                <h1 className='title'>TaskTracker</h1>
                 <div className='seperation'>
                 {props.signedIn ? <button onClick={setModal} >Add Task</button> : <button onClick={props.signIn}>Sign In</button>}
                 {props.signedIn && <button onClick={props.signOut}>Sign Out</button>}
