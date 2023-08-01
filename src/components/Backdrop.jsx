@@ -1,7 +1,6 @@
-import '../App.css'
+import "../App.css";
 
-function Backdrop(props){
-    return <div className="backdrop" onClick={props.onClick}></div>
-
+function Backdrop(props) {
+  return <div className="backdrop" onClick={props.onClick}></div>;
 }
-export default Backdrop
+export default Backdrop;
